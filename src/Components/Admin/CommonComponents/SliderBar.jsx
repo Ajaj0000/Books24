@@ -43,7 +43,7 @@ function SlideBar() {
                         </li>
                         
                         <li>
-                            <Link>
+                            <Link to='/item'>
                                 <span className="icon"><MdOutlineProductionQuantityLimits /></span>
                                 <span className="title">Items</span>
                             </Link>
