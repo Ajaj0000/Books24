@@ -9,26 +9,15 @@ import { CiLogout } from "react-icons/ci";
 
 function SlideBar() {
 
-    const [toggleSlide, setToggleSlide] = useState(false)
+    const [active, setActive] = useState(false)
 
     return (
         <>
-
-
-            <div>
-                <header onClick={() => setToggleSlide(!toggleSlide)}>
-                    <div className="toggle">
-                        <i className="fas fa-bars"></i>
-                    </div>
-                    <h3>Dashboard</h3>
-                    <Link>
-                        <i className="fas fa-sign-out-alt"></i>
-                    </Link>
-                </header>
-                <nav className={toggleSlide ? 'active' : ''}>
+            <div className={active ? "active main" : "main"}>
+                <nav className={active ? "active" : ""}>
                     <ul>
                         <li>
-                            <Link className="toggle">
+                            <Link className="toggle" onClick={() => setActive(!active)}>
                                 <span className="icon"><IoMdMenu /></span>
                                 <span className="title">Menu</span>
                             </Link>
@@ -40,23 +29,17 @@ function SlideBar() {
                             </Link>
                         </li>
                         <li>
-                            <Link>
+                            <Link to='/profile'>
                                 <span className="icon"><IoPerson /></span>
                                 <span className="title">Profile</span>
                             </Link>
                         </li>
                         <li>
-                            <Link>
+                            <Link to='/category'>
                                 <span className="icon"><MdOutlineCategory /></span>
                                 <span className="title">Category</span>
                             </Link>
                         </li>
-                        {/* <li>
-                        <Link>
-                            <span className="icon"><i className="fas fa-info"></i></span>
-                            <span className="title"></span>
-                        </Link>
-                    </li> */}
                         <li>
                             <Link>
                                 <span className="icon"><MdOutlineProductionQuantityLimits /></span>

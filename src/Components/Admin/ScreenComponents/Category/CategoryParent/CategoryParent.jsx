@@ -1,12 +1,11 @@
 import React from "react";
 import { CategorySection } from "../CategoryChild/CategorySection";
-import { SlideBar } from "../../../CommonComponents/SliderBar";
+import { MergeComponents } from "../../../CommonComponents/MergeComponents";
 
 function CategoryParent() {
     return (
         <>
-        <SlideBar/>
-            <CategorySection />
+            <MergeComponents getComponent={<CategorySection/>}/>
         </>
     )
 }
