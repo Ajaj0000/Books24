@@ -159,6 +159,8 @@ header {
     width: 95%;
 }
 /* ---Admin-Category--- */
+
+
 .category{
     display: flex;
     justify-content: center;
@@ -212,6 +214,18 @@ border-radius: 4px;
     background-color: #52575d;
     color: white;
 }
+.category-btn {
+    display:flex;
+    justify-content: space-evenly;
+    width: 50%;
+    align-items: center;
+
+}
+.select-cat .selectList{
+    border: 1px solid grey;
+    outline: none;
+    padding: 7px 9px;
+}
 .search{
     display: flex;
    justify-content: center;
@@ -220,15 +234,115 @@ border-radius: 4px;
    width: 30%;
    
 }
-.category .category-filter .search h5{
+
+ .search h4{
 margin-bottom: 0;
 margin-right: 5px;
 font-weight: 300;
 font-family: Arial, Helvetica, ;
 }
-.category .category-filter .search input{
+.search input{
 padding: 4px 20px 4px 7px;
 border-radius: 4px;
 width: 100% ;
-
+outline: none;
+border:.1px solid gray ;
 }
+
+
+.menu-table-container {
+    width: 90%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    margin-top: 2rem;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .dropdown-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .search-input {
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto; /* Ensures table can scroll horizontally */
+  }
+  
+  .menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .menu-table th, .menu-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+  
+  .menu-table th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .status-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .status-btn.activee {
+    background-color: green;
+  }
+  
+  .status-btn.inactive {
+    background-color: red;
+  }
+  
+  .action-btn {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .action-btn.confirm {
+    background-color: green;
+    color: white;
+  }
+  
+  .action-btn.edit {
+    background-color: gray;
+    color: white;
+  }
+  
+  /* Media Query for small screens */
+  @media (max-width: 768px) {
+    .controls {
+      flex-direction: column;
+    }
+  
+    .menu-table th, .menu-table td {
+      font-size: 12px;
+      padding: 5px;
+    }
+  
+    .status-btn {
+      padding: 3
+    }}  
