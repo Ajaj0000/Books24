@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { DashboardParent } from "../Admin/ScreenComponents/Dashboard/DashboardParent/DashboardParent";
-import { Home } from "../User/ScreenComponents/Home";
-import { CategoryParent } from "../Admin/ScreenComponents/Category/CategoryParent/CategoryParent";
-import { ProfileParent } from "../Admin/ScreenComponents/Profile/ProfileParent/ProfileParent";
-import { ItemsParents } from "../Admin/ScreenComponents/Items/ItemsParent/ItemsParents";
+import { DashboardParent } from "../Components/Admin/ScreenComponents/Dashboard/DashboardParent/DashboardParent";
+import { Home } from "../Components/User/ScreenComponents/Home";
+import { CategoryParent } from "../Components/Admin/ScreenComponents/Category/CategoryParent/CategoryParent";
+import { ProfileParent } from "../Components/Admin/ScreenComponents/Profile/ProfileParent/ProfileParent";
+import { ItemsParents } from "../Components/Admin/ScreenComponents/Items/ItemsParent/ItemsParents";
 
 function Routing() {
     return (
