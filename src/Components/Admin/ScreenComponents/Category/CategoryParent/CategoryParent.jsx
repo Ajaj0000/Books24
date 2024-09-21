@@ -5,8 +5,9 @@ import { SlideBar } from "../../../CommonComponents/SliderBar";
 function CategoryParent() {
     return (
         <>
-        <SlideBar/>
-            <CategorySection />
+      
+                <CategorySection />
+           
         </>
     )
 }

@@ -46,7 +46,7 @@ function SlideBar() {
                             </Link>
                         </li>
                         <li>
-                            <Link>
+                            <Link to='/'>
                                 <span className="icon"><MdOutlineCategory /></span>
                                 <span className="title">Category</span>
                             </Link>
