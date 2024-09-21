@@ -12,33 +12,28 @@
     font-family: "Poppins", "robotoregular", sans-serif;
 }
 
-body {
-    min-height: 100vh;
-    /* background: var(--bg-primary); */
-}
 
 nav {
     position: fixed;
-    width: 60px;
+    width: 54px;
     height: 100%;
     background: var(--bg-secondary);
     transition: .5s;
     overflow: hidden;
 }
-
+.main{
+    width: 54px;
+}
 .active {
-    width: 300px !important;
+    width: 260px !important;
+    transition: .5s;
+    overflow: hidden;
 }
 
-/* nav:hover {
-    width: 300px;
-} */
-
 nav ul {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {

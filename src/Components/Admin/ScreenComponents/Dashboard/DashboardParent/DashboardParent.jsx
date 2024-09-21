@@ -1,14 +1,11 @@
 import React from "react";
-import { SlideBar } from "../../../CommonComponents/SliderBar";
 import { Dashboard } from "../DashboardChild/Dashboard";
+import { MergeComponents } from "../../../CommonComponents/MergeComponents";
 
 function DashboardParent() {
     return (
         <>
-            <div style={{display:"flex",justifyContent:"space-between"}}>
-                <SlideBar />
-                <Dashboard />
-            </div>
+           <MergeComponents getComponent={<Dashboard/>}/>
         </>
     )
 }
