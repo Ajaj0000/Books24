@@ -4,8 +4,8 @@ import { SlideBar } from "./SliderBar";
 function MergeComponents(props) {
     return (
         <>
-            <div className="main d-flex w-100">
-                <div className="mainLite mr-3">
+            <div className="merge">
+                <div className="mainLite">
                     <SlideBar/>
                 </div>
                 <div className="contant">

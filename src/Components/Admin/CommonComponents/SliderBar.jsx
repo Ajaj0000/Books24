@@ -34,16 +34,14 @@ function SlideBar() {
                                 <span className="title">Profile</span>
                             </Link>
                         </li>
+
                         <li>
-<<<<<<< HEAD
-                            <Link to='/'>
-=======
                             <Link to='/category'>
->>>>>>> 300f13e5a7a01c3ddb65414525378db74a597587
                                 <span className="icon"><MdOutlineCategory /></span>
                                 <span className="title">Category</span>
                             </Link>
                         </li>
+                        
                         <li>
                             <Link>
                                 <span className="icon"><MdOutlineProductionQuantityLimits /></span>
