@@ -159,6 +159,8 @@ header {
     width: 95%;
 }
 /* ---Admin-Category--- */
+
+
 .category{
     display: flex;
     justify-content: center;
@@ -212,6 +214,18 @@ border-radius: 4px;
     background-color: #52575d;
     color: white;
 }
+.category-btn {
+    display:flex;
+    justify-content: space-evenly;
+    width: 50%;
+    align-items: center;
+
+}
+.select-cat .selectList{
+    border: 1px solid grey;
+    outline: none;
+    padding: 7px 9px;
+}
 .search{
     display: flex;
    justify-content: center;
@@ -220,22 +234,22 @@ border-radius: 4px;
    width: 30%;
    
 }
-.category .category-filter .search h5{
+
+ .search h4{
 margin-bottom: 0;
 margin-right: 5px;
 font-weight: 300;
 font-family: Arial, Helvetica, ;
 }
-.category .category-filter .search .input{
-    outline: none;
-    border: 1px solid black;
-}
-.category .category-filter .search input{
-    padding: 10px 12px 10px 12px;
+.search input{
+padding: 4px 20px 4px 7px;
 border-radius: 4px;
 width: 100% ;
-
+outline: none;
+border:.1px solid gray ;
 }
+
+
 .table {
     width: 100%;
     border-collapse: collapse;
