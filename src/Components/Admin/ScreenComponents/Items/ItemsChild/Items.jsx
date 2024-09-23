@@ -154,7 +154,7 @@ function Items() {
                 </div>
 
                 <div className="table-wrapper">
-                    <table className="menu-table">
+                    <table className="table">
                         <thead>
                             <tr>
                                 <th>Item Id</th>
@@ -179,15 +179,15 @@ function Items() {
                                     <td>{item.stock}</td>
                                     <td>
                                         <button
-                                            className={`status-btn ${item.status ? 'activee' : 'inactive'}`}
+                                            className={`status ${item.status ? 'active-btn' : 'inactive'}`}
                                             onClick={() => toggleStatus(item.id)}
                                         >
                                             {item.status ? 'Available' : 'Not Available'}
                                         </button>
                                     </td>
                                     <td>
-                                        <button className="action-btn confirm"><AiFillDelete /></button>
-                                        <button className="action-btn edit"><FaEdit /></button>
+                                        <button className="action-btn delete-btn"><AiFillDelete /></button>
+                                        <button className="action-btn edit-btn"><FaEdit /></button>
                                     </td>
                                 </tr>
                             ))}
