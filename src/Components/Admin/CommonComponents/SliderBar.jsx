@@ -9,7 +9,7 @@ import { CiLogout } from "react-icons/ci";
 
 function SlideBar() {
 
-    const [active, setActive] = useState(false)
+    const [active, setActive] = useState(true)
 
     return (
         <>

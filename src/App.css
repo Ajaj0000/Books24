@@ -216,10 +216,9 @@ border-radius: 4px;
 }
 .category-btn {
     display:flex;
-    justify-content: space-evenly;
+    justify-content: end;
     width: 50%;
     align-items: center;
-
 }
 .select-cat .selectList{
     border: 1px solid grey;
@@ -242,7 +241,7 @@ font-weight: 300;
 font-family: Arial, Helvetica, ;
 }
 .search input{
-padding: 4px 20px 4px 7px;
+padding: 10px 20px 10px 8px;
 border-radius: 4px;
 width: 100% ;
 outline: none;
@@ -272,7 +271,10 @@ border:.1px solid gray ;
     background-color: #28a745;
     color: white;
   }
-  
+  .activee {
+    background-color: #28a745;
+    color: white;
+  }
   .inactive {
     background-color: #dc3545;
     color: white;

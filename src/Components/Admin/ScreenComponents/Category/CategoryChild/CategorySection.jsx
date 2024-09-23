@@ -4,12 +4,12 @@ import { AiFillDelete } from "react-icons/ai";
 
 function CategorySection() {
     const [data, setData] = useState([
-        { id: 1, title: "Rjasthan G.K", parentCategory: "", printer: "Printer1(Default)", status: "Active" },
-        { id: 2, title: "Springboard Classnotes", parentCategory: "", printer: "Printer1(Default)", status: "Inactive" },
-        { id: 3, title: "RBSE & NCERT Books Use In Competition Exam", parentCategory: "", printer: "Printer1(Default)", status: "Active" },
-        { id: 4, title: "Sarthi Publication", parentCategory: "", printer: "Printer1(Default)", status: "Inactive" },
-        { id: 5, title: "MSC Solved Paper", parentCategory: "", printer: "Printer1(Default)", status: "Active" },
-        { id: 6, title: "VMOU M.A Political", parentCategory: "", printer: "Printer1(Default)", status: "Active" },
+        { id: 1,itemid:"3321", title: "Rjasthan G.K", parentCategory: "", printer: "Printer1(Default)", status: "Active" },
+        { id: 2,itemid:"3322", title: "Springboard Classnotes", parentCategory: "", printer: "Printer1(Default)", status: "Inactive" },
+        { id: 3,itemid:"3323", title: "RBSE & NCERT Books Use In Competition Exam", parentCategory: "", printer: "Printer1(Default)", status: "Active" },
+        { id: 4,itemid:"3324", title: "Sarthi Publication", parentCategory: "", printer: "Printer1(Default)", status: "Inactive" },
+        { id: 5,itemid:"3325", title: "MSC Solved Paper", parentCategory: "", printer: "Printer1(Default)", status: "Active" },
+        { id: 6,itemid:"3326", title: "VMOU M.A Political", parentCategory: "", printer: "Printer1(Default)", status: "Active" },
     ]);
 
     const deleteItem = (id) => {
@@ -19,6 +19,11 @@ function CategorySection() {
     const editItem = (id) => {
         // Define your edit logic here.
         console.log(`Editing item with id ${id}`);
+    };
+    const toggleid = (id) => {
+        setData(data.map(item =>
+            item.id === id ? { ...item, status: !item.status } : item
+        ));
     };
     return (
         <>
@@ -59,7 +64,7 @@ function CategorySection() {
                     <table className="table">
                         <thead>
                             <tr>
-                                <th>Icon (Reorder)</th>
+                                <th>Item Id</th>
                                 <th>Title</th>
                                 <th>Parent Category</th>
                                 <th>Printer</th>
@@ -71,14 +76,16 @@ function CategorySection() {
                             {data.map((item, index) => (
                                 <tr key={item.id}>
                                     <td>
-                                        <FaGripVertical />
+                                     {item.itemid}
                                     </td>
                                     <td>{item.title}</td>
                                     <td>{item.parentCategory}</td>
                                     <td>{item.printer}</td>
                                     <td>
-                                        <span className={`status ${item.status === "Active" ? "active-btn" : "inactive"}`}>
-                                            {item.status}
+                                        <span className={`status ${item.status ? "activee" : "inactive"}`}
+                                        onClick={()=>toggleid(item.id)}
+                                        >
+                                            {item.status ?'Available':'Not Available' }
                                         </span>
                                     </td>
                                     <td>
