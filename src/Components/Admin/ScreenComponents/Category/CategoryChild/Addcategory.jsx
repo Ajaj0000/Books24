@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { RxCross1 } from "react-icons/rx";
 import JoditEditor from "jodit-react";
+import { useNavigate } from "react-router-dom";
+import { RxCross1 } from "react-icons/rx"; 
 
-function AddItems() {
-    const navigate = useNavigate();
+function Addcategory() {
 
+    let navigate = useNavigate();
 
     const editor = useRef(null);
     const [text, setText] = useState('');
@@ -45,22 +45,35 @@ function AddItems() {
             setImagePreviewUrl(null);
         }
     };
+
     return (
         <>
-            <div className="add-item">
+            <div className="addcategory">
                 <div className="row">
                     <div className="category-nav">
                         <div className="category-text">
-                            <h4>Add Item List</h4>
+                            <h4>Add Category List</h4>
                         </div>
                         <div className="category-btn">
-                            <button onClick={() => navigate(-1)}><RxCross1 /></button>
+                        <button onClick={()=>navigate(-1)}><RxCross1 /></button>
                         </div>
                     </div>
                     <hr />
-
                     <div className="add-form">
                         <form>
+                            {/* Select Parent Category */}
+                            <div className="add">
+                                <label>Select Parent Category</label>
+                                <select name="parentCategory" value={formData.parentCategory} onChange={handleInputChange}>
+                                    <option value="">Select Parent Category</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    {/* Add more options as needed */}
+                                </select>
+                            </div>
+
                             {/* Title Input */}
                             <div className="add">
                                 <label>Title</label>
@@ -68,6 +81,17 @@ function AddItems() {
                                     type="text"
                                     name="title"
                                     value={formData.title}
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+
+                            {/* Tax Multi Select */}
+                            <div className="add">
+                                <label>Select Tax (Multi Select)</label>
+                                <input
+                                    type="text"
+                                    name="tax"
+                                    value={formData.tax}
                                     onChange={handleInputChange}
                                 />
                             </div>
@@ -81,33 +105,10 @@ function AddItems() {
                                         checked={formData.takeAway}
                                         onChange={handleInputChange}
                                     />
-                                    Coupon Code/Rewards Application
+                                    TakeAway
                                 </label>
                             </div>
 
-                            {/* Category Input */}
-                            <div className="add-mrp">
-                             
-                                <div className="add add-mrp-1" >
-                                    <label>Category </label>
-                                    <input
-                                        type="text"
-                                        placeholder="MRP"
-                                    />
-                                </div>
-                            
-                                <div className="add add-mrp-1">
-                                <label>Select Parent Category</label>
-                                <select name="parentCategory" value={formData.parentCategory} onChange={handleInputChange}>
-                                    <option value="">Select Sub Category</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    {/* Add more options as needed */}
-                                </select>
-                            </div>
-                            </div>
                             {/* Category Icon File Upload */}
                             <div className="add">
                                 <label>Category Icon</label>
@@ -117,40 +118,9 @@ function AddItems() {
                                 {/* Display the uploaded image preview */}
                                 {imagePreviewUrl && (
                                     <div className="image-preview">
-                                        <img src={imagePreviewUrl} alt="Category Icon" style={{ height: '150px', marginTop: "10px", objectFit: 'cover' }} />
+                                        <img src={imagePreviewUrl} alt="Category Icon" style={{ height: '150px',marginTop:"10px", objectFit: 'cover' }} />
                                     </div>
                                 )}
-                            </div>
-
-                            {/* MRP Input */}
-                            <div className="add-mrp">
-                                {/* Title Input */}
-                                <div className="add add-mrp-1" >
-                                    <label>MRP </label>
-                                    <input
-                                        type="text"
-                                        placeholder="MRP"
-                                    />
-                                </div>
-                                {/* Title Input */}
-                                <div className="add add-mrp-1">
-                                    <label>Selling Price</label>
-                                    <input
-                                        type="text"
-                                        placeholder="Selling Price"
-                                    />
-                                </div>
-                            </div>
-
-                            {/* weight Input */}
-                            <div className="add-mrp">
-                                <div className="add add-mrp-1">
-                                    <label>Weight</label>
-                                    <input
-                                        type="text"
-                                        placeholder="Wieght"
-                                    />
-                                </div>
                             </div>
 
                             {/* Time Availability */}
@@ -184,6 +154,8 @@ function AddItems() {
                 </div>
             </div>
         </>
-    )
+    );
 }
-export { AddItems }
+
+export { Addcategory };
+       

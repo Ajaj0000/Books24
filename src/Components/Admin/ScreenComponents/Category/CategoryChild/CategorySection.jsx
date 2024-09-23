@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { FaEdit, FaFilter, FaGripVertical, FaTrashAlt } from "react-icons/fa";
+import { FaEdit, FaFilter,  FaTrashAlt } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function CategorySection() {
     const [data, setData] = useState([
@@ -34,7 +35,9 @@ function CategorySection() {
                             <h4>Category List</h4>
                         </div>
                         <div className="category-btn">
-                            <button>Add Category</button>
+                            <Link to="/addcategory">
+                            <button>Add Category</button> 
+                            </Link>
                         </div>
                     </div>
                     <hr />

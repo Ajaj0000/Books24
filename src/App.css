@@ -1,6 +1,5 @@
 @font-face {
     font-family: 'robotoregular';
-    /* src: url(../fonts/roboto-regular-webfont.woff) format('woff'); */
     font-weight: normal;
     font-style: normal;
 }
@@ -243,8 +242,17 @@ header {
     border: 1px solid grey;
     outline: none;
     padding: 7px 9px;
+    margin-right: 20px;
+    border-radius: 4px;
 }
-
+.menu-table-container .drop-select {
+    border: 1px solid grey;
+    outline: none;
+    padding: 4px 4px;
+    margin-right: 15px;
+    margin-left: 5px;
+    border-radius: 4px;
+}
 .search {
     display: flex;
     justify-content: center;
@@ -337,4 +345,377 @@ border:.1px solid gray ;
 
 .pagination-buttons button:hover {
     background-color: #e2e6ea;
+}
+
+/*----- CATEGORY-- Add-Category ----- */
+.addcategory{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 80px;
+}
+.addcategory .category-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 16px;
+}
+.addcategory  hr{
+    margin-bottom: 30px;
+}
+.add-item .add-form{
+    display: flex;
+    justify-content: center !important;
+}
+.addcategory .add{
+    margin-bottom: 10px;
+}
+.addcategory .category-nav h4 {
+    font-weight: 300;
+    font-family: Arial, Helvetica, ;
+    font-size: 1.5rem;
+}
+.addcategory .category-btn button{
+   border: none;
+   background-color: white;
+   font-size: 1.2rem;
+    color: black;
+}
+
+.addcategory form {
+    margin: 0 auto;
+    width: 60%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Form Group Styling */
+
+  .addcategory  label {
+    font-family: Arial, Helvetica;
+    font-weight: 500;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .addcategory  input[type="text"],
+  .addcategory  select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .addcategory  input[type="radio"],
+  .addcategory  input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  /* File Upload */
+  .addcategory  input[type="file"] {
+    display: block;
+    margin-top: 8px;
+    padding: 8px 0;
+  }
+  
+  .addcategory  button[type="submit"] {
+    display: block;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 15%;
+  }
+  
+  .addcategory  button[type="submit"]:hover {
+    background-color: #52575d;
+  }
+  
+  /* Time Availability checkbox */
+  .addcategory  div label input[type="checkbox"] + label {
+    margin-left: 10px;
+  }
+  
+  /* Horizontal and Vertical Layout Radio Buttons */
+  
+  /* Category Icon */
+  .addcategory  div input[type="file"] {
+    border: 2px dashed #ccc;
+    border-radius: 6px;
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+    color: #999;
+  }
+  
+  .addcategory  div input[type="file"]::before {
+    content: "Drag and drop a file here or click";
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .addcategory  p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+  }
+  .addcategory  .editor-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .addcategory  .toolbar {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    align-items: center;
+  }
+  
+  .addcategory .toolbar select, .toolbar button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .addcategory  .toolbar button {
+    font-size: 16px;
+  }
+  
+  .addcategory  .toolbar button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .addcategory  .editor {
+    border: 1px solid #ccc;
+    min-height: 150px;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    background-color: white;
+    border-radius: 5px;
+  }
+  .addcategory  .editor:focus {
+    outline: none;
+  }
+  .addcategory  .jodit-workplace{
+    min-height: 150px !important;
+  }
+  .addcategory .btn{
+ display: flex;
+ justify-content: center;
+ margin-top: 30px;
+  }
+
+/* -------ITEMS-- Add-Items------- */
+.add-item{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 80px;
+}
+.add-item .category-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    margin-top: 20px;
+}
+
+.add-item .category-nav h4 {
+    font-weight: 300;
+    font-family: Arial, Helvetica, ;
+    font-size: 1.5rem;
+}
+.add-item .category-btn button{
+    border: none;
+    background-color: white;
+    font-size: 1.2rem;
+     color: black;
+ }
+ .add-item .add-form{
+    display: flex;
+    justify-content: center !important;
+    margin-top: 30px;
+}
+.add-item .add{
+    margin-bottom: 10px;
+}
+.add-item .category-nav h4 {
+    font-weight: 300;
+    font-family: Arial, Helvetica, ;
+    font-size: 1.5rem;
+}
+.add-item .category-btn button{
+   border: none;
+   background-color: white;
+   font-size: 1.2rem;
+    color: black;
+}
+
+.add-item form {
+    margin: 0 auto;
+    width: 60%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Form Group Styling */
+
+  .add-item  label {
+    font-family: Arial, Helvetica;
+    font-weight: 500;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .add-item  input[type="text"],
+  .add-item  select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .add-item  input[type="radio"],
+  .add-item  input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  /* File Upload */
+  .add-item  input[type="file"] {
+    display: block;
+    margin-top: 8px;
+    padding: 8px 0;
+  }
+  
+  .add-item  button[type="submit"] {
+    display: block;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 15%;
+  }
+  
+  .add-item  button[type="submit"]:hover {
+    background-color: #52575d;
+  }
+  
+  /* Time Availability checkbox */
+  .add-item  div label input[type="checkbox"] + label {
+    margin-left: 10px;
+  }
+  
+  /* Horizontal and Vertical Layout Radio Buttons */
+  
+  /* Category Icon */
+  .add-item  div input[type="file"] {
+    border: 2px dashed #ccc;
+    border-radius: 6px;
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+    color: #999;
+  }
+  
+  .add-item  div input[type="file"]::before {
+    content: "Drag and drop a file here or click";
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .add-item  p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+  }
+  .add-item  .editor-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .add-item  .toolbar {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    align-items: center;
+  }
+  
+  .add-item .toolbar select, .toolbar button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .add-item  .toolbar button {
+    font-size: 16px;
+  }
+  
+  .add-item  .toolbar button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .add-item  .editor {
+    border: 1px solid #ccc;
+    min-height: 150px;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    background-color: white;
+    border-radius: 5px;
+  }
+  .add-item  .editor:focus {
+    outline: none;
+  }
+  .add-item  .jodit-workplace{
+    min-height: 150px !important;
+  }
+  .add-item .btn{
+ display: flex;
+ justify-content: center;
+ margin-top: 30px;
+  }
+  .add-item .btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+     }
+.add-item .add-mrp{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.add-item .add-mrp .add-mrp-1{
+    width: 40%;
 }

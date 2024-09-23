@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaFilter } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 function Items() {
 
@@ -98,7 +99,9 @@ function Items() {
                                     }
                                 </select>
                             </div>
+                            <Link to="/additemparent">
                             <button>Add Item</button>
+                            </Link>
                         </div>
                     </div>
                     <hr />
@@ -120,10 +123,11 @@ function Items() {
                                 <button><FaFilter /></button>
                             </div>
                         </div>
-                        {/* <div className="search">
-                            <h4>Search:</h4>
-                            <input type="text" placeholder="Search all Category" className='inputItem' />
-                        </div> */}
+                        <div className="search">
+                        <h4>Search:</h4>
+                        <input type="text" placeholder="Search..." value={searchTerm}
+                            onChange={handleSearch} className='inputItem' />
+                    </div>
                     </div>
                 </div>
             </div>
@@ -132,18 +136,14 @@ function Items() {
                 <div className="controls">
                     <div className="dropdown-container">
                         <label>Show </label>
-                        <select>
+                        <select className='drop-select'>
                             <option value="all">All</option>
                             <option value="active">Active</option>
                             <option value="inactive">Inactive</option>
                         </select>
-                        <label> entries</label>
+                        <label> Entries</label>
                     </div>
-                    <div className="search">
-                        <h4>Search:</h4>
-                        <input type="text" placeholder="Search..." value={searchTerm}
-                            onChange={handleSearch} className='inputItem' />
-                    </div>
+                 
                     {/* <input
                         type="text"
                         placeholder="Search..."
