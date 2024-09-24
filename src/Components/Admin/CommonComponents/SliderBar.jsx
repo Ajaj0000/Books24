@@ -6,6 +6,7 @@ import { IoPerson } from "react-icons/io5";
 import { MdOutlineCategory } from "react-icons/md";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { CiLogout } from "react-icons/ci";
+import { CiShoppingCart } from "react-icons/ci";
 
 function SlideBar() {
 
@@ -34,7 +35,12 @@ function SlideBar() {
                                 <span className="title">Profile</span>
                             </Link>
                         </li>
-
+                        <li>
+                            <Link to='/order'>
+                                <span className="icon"><CiShoppingCart /></span>
+                                <span className="title">Orders</span>
+                            </Link>
+                        </li>
                         <li>
                             <Link to='/category'>
                                 <span className="icon"><MdOutlineCategory /></span>

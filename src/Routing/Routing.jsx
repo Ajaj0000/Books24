@@ -8,6 +8,8 @@ import { ItemsParents } from "../Components/Admin/ScreenComponents/Items/ItemsPa
 import { AddItems } from "../Components/Admin/ScreenComponents/Items/ItemsChild/AddItems";
 import { AddcategoryParent } from "../Components/Admin/ScreenComponents/Category/CategoryParent/AddcategoryParent";
 import { AdditemParent } from "../Components/Admin/ScreenComponents/Items/ItemsParent/AdditemParent";
+import { OrderParent } from "../Components/Admin/ScreenComponents/Order/OrderParent/OrderParent";
+
 
 function Routing() {
     return (
@@ -31,6 +33,8 @@ function Routing() {
                 <Route path="/addcategory" element={<AddcategoryParent/>}/>
 
                 <Route path="/additemparent" element={<AdditemParent/>}/>
+
+               <Route path="/order" element={<OrderParent/>}/>
 
             </Routes>
         </>

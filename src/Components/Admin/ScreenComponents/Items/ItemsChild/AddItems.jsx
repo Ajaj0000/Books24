@@ -148,7 +148,7 @@ function AddItems() {
                                     <label>Weight</label>
                                     <input
                                         type="text"
-                                        placeholder="Wieght"
+                                        placeholder="Weight"
                                     />
                                 </div>
                             </div>

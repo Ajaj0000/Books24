@@ -100,7 +100,7 @@ function Items() {
                                 </select>
                             </div>
                             <Link to="/additemparent">
-                            <button>Add Item</button>
+                                <button>Add Item</button>
                             </Link>
                         </div>
                     </div>
@@ -124,10 +124,10 @@ function Items() {
                             </div>
                         </div>
                         <div className="search">
-                        <h4>Search:</h4>
-                        <input type="text" placeholder="Search..." value={searchTerm}
-                            onChange={handleSearch} className='inputItem' />
-                    </div>
+                            <h4>Search:</h4>
+                            <input type="text" placeholder="Search..." value={searchTerm}
+                                onChange={handleSearch} className='inputItem' />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -143,7 +143,7 @@ function Items() {
                         </select>
                         <label> Entries</label>
                     </div>
-                 
+
                     {/* <input
                         type="text"
                         placeholder="Search..."
@@ -153,46 +153,42 @@ function Items() {
                     /> */}
                 </div>
 
-                <div className="table-wrapper">
-                    <table className="table">
-                        <thead>
-                            <tr>
-                                <th>Item Id</th>
-                                <th>Item Name</th>
-                                <th>Category</th>
-                                <th>Sub Cat</th>
-                                <th>MRP</th>
-                                <th>Stock</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {filteredData.map(item => (
-                                <tr key={item.id}>
-                                    <td>{item.id}</td>
-                                    <td>{item.name}</td>
-                                    <td>{item.category}</td>
-                                    <td>{item.subCategory}</td>
-                                    
-                                    <td>{item.mrp}</td>
-                                    <td>{item.stock}</td>
-                                    <td>
-                                        <button
-                                            className={`status ${item.status ? 'active-btn' : 'inactive'}`}
-                                            onClick={() => toggleStatus(item.id)}
-                                        >
-                                            {item.status ? 'Available' : 'Not Available'}
-                                        </button>
-                                    </td>
-                                    <td>
-                                        <button className="action-btn delete-btn"><AiFillDelete /></button>
-                                        <button className="action-btn edit-btn"><FaEdit /></button>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                <div className="order-list">
+                    <div className="order-list-header">
+                        <div>Item Id</div>
+                        <div>Item Name</div>
+                        <div>Category</div>
+                        <div>Sub Cat</div>
+                        <div>MRP</div>
+                        <div>Stock</div>
+                        <div>Status</div>
+                        <div>Action</div>
+                    </div>
+                    {filteredData.map(item => (
+                        <div key={item.id} className='order-list-row'>
+                            <div>{item.id}</div>
+                            <div>{item.name}</div>
+                            <div>{item.category}</div>
+                            <div>{item.subCategory}</div>
+
+                            <div>{item.mrp}</div>
+                            <div>{item.stock}</div>
+                            <div>
+                                <button
+                                    className={`status ${item.status ? 'active-btn' : 'inactive'}`}
+                                    onClick={() => toggleStatus(item.id)}
+                                >
+                                    {item.status ? 'Available' : 'Not Available'}
+                                </button>
+                            </div>
+                            <div>
+                                <button className="action-btn delete-btn"><AiFillDelete /></button>
+                                <button className="action-btn edit-btn"><FaEdit /></button>
+                            </div>
+                        </div>
+                    ))}
+
+
                 </div>
             </div>
 
